@@ -11,6 +11,7 @@ import Moya
 
 enum MoyaService {
     case getUser(userId: String)
+    case getAllUsers(page: String)
 }
 
 extension MoyaService: TargetType {
@@ -21,12 +22,14 @@ extension MoyaService: TargetType {
         switch self {
         case .getUser(let id):
             return "/api/users/\(id)"
+        case .getAllUsers(_):
+            return "/api/users"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getUser:
+        case .getUser, .getAllUsers:
             return .get
         }
     }
@@ -35,12 +38,14 @@ extension MoyaService: TargetType {
         switch self {
         case .getUser:
             return .requestPlain
+        case .getAllUsers(let pageNo):
+            return .requestParameters(parameters: ["page":pageNo], encoding: URLEncoding.default)
         }
     }
     
     var headers: [String : String]? {
         switch self {
-        case .getUser:
+        case .getUser, .getAllUsers:
             return ["Accept":"application/json",
                     "content-type":"application/json"]
         }
@@ -48,7 +53,7 @@ extension MoyaService: TargetType {
     
     var sampleData: Data {
         switch self {
-        case .getUser:
+        case .getUser, .getAllUsers:
             return "should be filled properly".utf8Encoded
         }
     }

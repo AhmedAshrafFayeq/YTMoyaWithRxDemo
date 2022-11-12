@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D0DB896291E94EC00D089A0 /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0DB895291E94EC00D089A0 /* MoyaService.swift */; };
 		6D0DB899291F877900D089A0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0DB898291F877900D089A0 /* ViewModel.swift */; };
+		6D0DB89C291F8D7000D089A0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0DB89B291F8D7000D089A0 /* UserModel.swift */; };
 		6D334B19291E93060019F37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D334B18291E93060019F37C /* AppDelegate.swift */; };
 		6D334B1B291E93060019F37C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D334B1A291E93060019F37C /* SceneDelegate.swift */; };
 		6D334B1D291E93060019F37C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D334B1C291E93060019F37C /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		07CE4C1B7D6D7A63119BC917 /* Pods-YTMoyaWithRxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTMoyaWithRxDemo.debug.xcconfig"; path = "Target Support Files/Pods-YTMoyaWithRxDemo/Pods-YTMoyaWithRxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6D0DB895291E94EC00D089A0 /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		6D0DB898291F877900D089A0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6D0DB89B291F8D7000D089A0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		6D334B15291E93060019F37C /* YTMoyaWithRxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTMoyaWithRxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D334B18291E93060019F37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D334B1A291E93060019F37C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		6D0DB89A291F8D6000D089A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D0DB89B291F8D7000D089A0 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6D334B0C291E93060019F37C = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		6D334B17291E93060019F37C /* YTMoyaWithRxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6D0DB89A291F8D6000D089A0 /* Models */,
 				6D0DB897291F876700D089A0 /* ViewModels */,
 				6D0DB894291E94C900D089A0 /* NetworkLayer */,
 				6D334B18291E93060019F37C /* AppDelegate.swift */,
@@ -230,6 +241,7 @@
 			files = (
 				6D0DB899291F877900D089A0 /* ViewModel.swift in Sources */,
 				6D334B1D291E93060019F37C /* ViewController.swift in Sources */,
+				6D0DB89C291F8D7000D089A0 /* UserModel.swift in Sources */,
 				6D334B19291E93060019F37C /* AppDelegate.swift in Sources */,
 				6D334B1B291E93060019F37C /* SceneDelegate.swift in Sources */,
 				6D0DB896291E94EC00D089A0 /* MoyaService.swift in Sources */,
