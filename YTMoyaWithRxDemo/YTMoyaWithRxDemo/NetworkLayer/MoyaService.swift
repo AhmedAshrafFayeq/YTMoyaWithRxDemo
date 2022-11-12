@@ -8,16 +8,19 @@
 import Foundation
 import Moya
 
-enum MoyaService: TargetType {
-    
+
+enum MoyaService {
     case getUser(userId: String)
+}
+
+extension MoyaService: TargetType {
     
     var baseURL: URL {return URL(string: "https://reqres.in")!}
     
     var path: String {
         switch self {
         case .getUser(let id):
-            return "/api/user/\(id)"
+            return "/api/users/\(id)"
         }
     }
     
